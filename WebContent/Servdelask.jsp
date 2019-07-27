@@ -7,7 +7,7 @@
 <title>Delete Record</title>
 </head>
 <body>
-<form action="/Servdel method="POST">
+<form action="/Servdel" method="POST">
 <p>Enter the firstname of record which you wish to delete</p>
 <br><br>
 <input type="text" name="delname">
