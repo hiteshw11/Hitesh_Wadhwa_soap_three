@@ -35,12 +35,13 @@ public class Servdel extends HttpServlet {
 		PrintWriter out=response.getWriter();
 		HttpSession session=request.getSession();
 		String delname=request.getParameter("delname");
+		String delname2=request.getParameter("delname2");
 		try
 	    {
 		Class.forName("com.mysql.jdbc.Driver"); 
 		java.sql.Connection con = DriverManager.getConnection("jdbc:mysql://us-cdbr-iron-east-02.cleardb.net/heroku_3648c22fa7f10d4","b94ca7d19a7f0c","9e6fec77");
 		Statement st= con.createStatement();
-		int i=st.executeUpdate("DELETE FROM onetable WHERE fname ="+delname+"");
+		int i=st.executeUpdate("DELETE * FROM onetable WHERE fname ="+delname+" AND lname="+delname2+"");
 		System.out.println("Sucessful delete");
 	    }
 		catch(Exception e)
