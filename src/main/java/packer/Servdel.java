@@ -3,6 +3,7 @@ package packer;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.Statement;
 
 import javax.servlet.ServletException;
@@ -40,9 +41,15 @@ public class Servdel extends HttpServlet {
 	    {
 		Class.forName("com.mysql.jdbc.Driver"); 
 		java.sql.Connection con = DriverManager.getConnection("jdbc:mysql://us-cdbr-iron-east-02.cleardb.net/heroku_3648c22fa7f10d4","b94ca7d19a7f0c","9e6fec77");
-		Statement st= con.createStatement();
-		int i=st.executeUpdate("DELETE * FROM onetable WHERE fname ="+delname+" AND lname="+delname2+"");
-		System.out.println("Sucessful delete");
+		Statement stmt= con.createStatement();
+		//int rs=st.executeUpdate("DELETE FROM onetable WHERE fname ="+delname+" AND lname="+delname2+"");
+		stmt = con.createStatement();
+	      String sql = "DELETE FROM onetable " + "WHERE fname = "+delname+"";
+	      stmt.executeUpdate(sql);
+
+		
+		
+		out.println("Sucessful delete");
 	    }
 		catch(Exception e)
 		{
