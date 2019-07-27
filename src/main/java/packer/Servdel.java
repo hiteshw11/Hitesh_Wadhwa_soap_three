@@ -34,7 +34,7 @@ public class Servdel extends HttpServlet {
 		// TODO Auto-generated method stub
 		PrintWriter out=response.getWriter();
 		HttpSession session=request.getSession();
-		String delname=(String)request.getParameter("delname");
+		String delname=request.getParameter("delname");
 		try
 	    {
 		Class.forName("com.mysql.jdbc.Driver"); 
