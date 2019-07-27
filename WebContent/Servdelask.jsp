@@ -12,6 +12,8 @@
 <br><br>
 <input type="text" name="delname">
 <br><br>
+<input type="text" name="delname2">
+<br><br>
 <input type="submit" name="submit">
 </form>
 </body>

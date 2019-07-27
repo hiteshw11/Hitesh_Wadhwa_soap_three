@@ -17,6 +17,7 @@
 <!--  <a href="/soap_database_3a/saved_contents_3a">Click Here To see stored</a>-->
 <a href="/saved_contents_3a">Click Here To see stored (redundant)</a>
 <p>Using REST application</p>
-
+<a href="/Servdelask.jsp">Click here to go for deletion</a>
+<br><br>
 </body>
 </html>
