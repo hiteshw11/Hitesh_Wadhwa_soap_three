@@ -15,7 +15,7 @@
 <a href="/Showall">Click Here To see all data</a>
 <br><br>
 <!--  <a href="/soap_database_3a/saved_contents_3a">Click Here To see stored</a>-->
-<a href="/saved_contents_3a">Click Here To see stored</a>
+<a href="/saved_contents_3a">Click Here To see stored (redundant)</a>
 <p>Using REST application</p>
 
 </body>

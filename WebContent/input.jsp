@@ -7,7 +7,8 @@
 <title>Enter Input values</title>
 </head>
 <body>
-<form action="/soap_database_3a/Serv1" method="POST">
+<!--  <form action="/soap_database_3a/Serv1" method="POST">-->
+<form action="/Serv1" method="POST">
 <p>Enter the First Name</p>
 <input type="text" name="fname">
 <br><br>
