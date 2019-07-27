@@ -8,11 +8,14 @@
 </head>
 <body>
 <p>For Soap Applications</p>
-<a href="/soap_database_3a/input.jsp">Click Here To insert values</a>
+<!--  <a href="/soap_database_3a/input.jsp">Click Here To insert values</a>-->
+<a href="/input.jsp">Click Here To insert values</a>
 <br><br>
-<a href="/soap_database_3a/Showall">Click Here To see all data</a>
+<!--  <a href="/soap_database_3a/Showall">Click Here To see all data</a>-->
+<a href="/Showall">Click Here To see all data</a>
 <br><br>
-<a href="/soap_database_3a/saved_contents_3a">Click Here To see stored</a>
+<!--  <a href="/soap_database_3a/saved_contents_3a">Click Here To see stored</a>-->
+<a href="/saved_contents_3a">Click Here To see stored</a>
 <p>Using REST application</p>
 
 </body>
