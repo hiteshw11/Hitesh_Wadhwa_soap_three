@@ -43,18 +43,19 @@ public class Serv1 extends HttpServlet {
 		// TODO Auto-generated method stub
 		PrintWriter out=response.getWriter();
 		HttpSession session=request.getSession();
-		String a1=(String)request.getParameter("fname");
-		String b1=(String)request.getParameter("lname");
+		//String a1=(String)request.getParameter("fname");
+		//String b1=(String)request.getParameter("lname");
 		out.print("<html><body>Check the value</body></html>");
 		out.print("<br>");
-		out.print(a1);
+		//out.print(a1);
 		out.print("<br>");
-		out.print(b1);
-		session.setAttribute("a1","a1");
-		session.setAttribute("b1","b1");
+		//out.print(b1);
+		//session.setAttribute("a1","a1");
+		//session.setAttribute("b1","b1");
 		try {
 			 //String url = "http://localhost:8080/soap_database_3/Servletone/op?wsdl";
-			String url = "https://shielded-tundra-11654.herokuapp.com/Servletone/op?wsdl";
+			//String url = "https://shielded-tundra-11654.herokuapp.com/Servletone/op?wsdl";
+			String url="https://infinite-beyond-53668.herokuapp.com/Serv/op?wsdl";
 			 URL obj = new URL(url);
 			 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 			 con.setRequestMethod("POST");
@@ -64,8 +65,8 @@ public class Serv1 extends HttpServlet {
 			 		"   <soapenv:Header/>\r\n" + 
 			 		"   <soapenv:Body>\r\n" + 
 			 		"      <pac:names>\r\n" + 
-			 		"         <arg0>"+a1+"</arg0>\r\n" + 
-			 		"         <arg1>"+b1+"</arg1>\r\n" + 
+			 		"         <arg0>John</arg0>\r\n" +                          //"+a1+" 
+			 		"         <arg1>Smith</arg1>\r\n" + 
 			 		"      </pac:names>\r\n" + 
 			 		"   </soapenv:Body>\r\n" + 
 			 		"</soapenv:Envelope>";
@@ -75,7 +76,7 @@ public class Serv1 extends HttpServlet {
 			 wr.flush();
 			 wr.close();
 			 String responseStatus = con.getResponseMessage();
-			 System.out.println(responseStatus);
+			 out.println(responseStatus);
 			 BufferedReader in = new BufferedReader(new InputStreamReader(
 			 con.getInputStream()));
 			 String inputLine;
@@ -84,7 +85,7 @@ public class Serv1 extends HttpServlet {
 			 response1.append(inputLine);
 			 }
 			 in.close();
-			 System.out.println("response:" +"\n"+ response1.toString());
+			 out.println("response:" +"\n"+ response1.toString());
 			 } catch (Exception e) {
 			 System.out.println(e);
 			 }

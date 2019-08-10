@@ -44,7 +44,7 @@ public class Servdel extends HttpServlet {
 		Statement stmt= con.createStatement();
 		//int rs=st.executeUpdate("DELETE FROM onetable WHERE fname ="+delname+" AND lname="+delname2+"");
 		stmt = con.createStatement();
-	      String sql = "DELETE FROM onetable " + "WHERE fname = "+delname+"";
+	      String sql = "DELETE FROM onetable WHERE fname = "+delname+"";
 	      stmt.executeUpdate(sql);
 
 		
