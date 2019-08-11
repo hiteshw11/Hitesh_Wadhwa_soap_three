@@ -85,6 +85,7 @@ public class Serv1 extends HttpServlet {
 			 response1.append(inputLine);
 			 }
 			 in.close();
+			 out.println("<body bgcolor=\"#FFEBCD\">");
 			 out.println("response:" +"\n"+ response1.toString());
 			 out.println("<br><br>");
 			 out.println("<a href='https://evening-savannah-34179.herokuapp.com'>Back Home");
