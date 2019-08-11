@@ -86,6 +86,8 @@ public class Serv1 extends HttpServlet {
 			 }
 			 in.close();
 			 out.println("response:" +"\n"+ response1.toString());
+			 out.println("<br><br>");
+			 out.println("<a href='https://evening-savannah-34179.herokuapp.com'>Back Home");
 			 } catch (Exception e) {
 			 System.out.println(e);
 			 }
