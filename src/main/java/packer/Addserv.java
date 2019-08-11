@@ -46,7 +46,7 @@ public class Addserv extends HttpServlet {
 		 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 		 con.setRequestMethod("POST");
 		 con.setRequestProperty("Content-Type","application/soap+xml;");
-		 String model_id=request.getParameter("model_id");
+		 int model_id=Integer.parseInt(request.getParameter("model_id"));
 		String make=request.getParameter("make");
 		String model=request.getParameter("model");
 		String class1=request.getParameter("class");
