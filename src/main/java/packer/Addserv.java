@@ -40,12 +40,13 @@ public class Addserv extends HttpServlet {
 		// TODO Auto-generated method stub
 		PrintWriter out=response.getWriter();
 		HttpSession session=request.getSession();
-		String url="https://infinite-beyond-53668.herokuapp.com/Serv/op?wsdl";
+		//String url="https://infinite-beyond-53668.herokuapp.com/Serv/op?wsdl";
+		String url="https://shielded-tundra-11654.herokuapp.com/Servletone/op?wsdl";
 		 URL obj = new URL(url);
 		 HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 		 con.setRequestMethod("POST");
 		 con.setRequestProperty("Content-Type","application/soap+xml;");
-		 String model_id=request.getParameter("model_id");
+		 int model_id=Integer.parseInt(request.getParameter("model_id"));
 		String make=request.getParameter("make");
 		String model=request.getParameter("model");
 		String class1=request.getParameter("class");
