@@ -93,7 +93,7 @@ public class Addserv extends HttpServlet {
 		try
 		{
 			Class.forName("com.mysql.jdbc.Driver"); 
-			java.sql.Connection con = DriverManager.getConnection("jdbc:mysql://us-cdbr-iron-east-02.cleardb.net/heroku_525dab1eaa9add9	","bfa6e379b01f5f","d061f471"); 
+			java.sql.Connection con = DriverManager.getConnection("jdbc:mysql://us-cdbr-iron-east-02.cleardb.net/DB_NAME","USERNAME","PASSWORD"); 
 			Statement st= con.createStatement(); 
 			ResultSet rs=st.executeQuery("INSERT into onetable values("+model_id+","+make+","+model+","+class1+")");
 			
