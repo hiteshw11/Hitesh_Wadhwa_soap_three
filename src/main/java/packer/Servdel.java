@@ -40,7 +40,7 @@ public class Servdel extends HttpServlet {
 		try
 	    {
 		Class.forName("com.mysql.jdbc.Driver"); 
-		java.sql.Connection con = DriverManager.getConnection("jdbc:mysql://us-cdbr-iron-east-02.cleardb.net/heroku_3648c22fa7f10d4","b94ca7d19a7f0c","9e6fec77");
+		java.sql.Connection con = DriverManager.getConnection("jdbc:mysql://us-cdbr-iron-east-02.cleardb.net/DB_NAME","USERNAME","PASSWORD");
 		Statement stmt= con.createStatement();
 		//int rs=st.executeUpdate("DELETE FROM onetable WHERE fname ="+delname+" AND lname="+delname2+"");
 		stmt = con.createStatement();
